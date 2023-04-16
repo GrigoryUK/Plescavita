@@ -18,7 +18,7 @@
 
 	&__block {
 		position: absolute;
-		z-index: 10;
+		z-index: var(--z-block-main);
 		max-width: 1630px;
 		width: 100%;
 		top: 50%;
