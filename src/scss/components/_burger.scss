@@ -3,6 +3,19 @@
 	width: 30px;
 	height: 30px;
 	position: relative;
+
+	&--close {
+		width: 40px;
+		height: 40px;
+
+		@include mobile {
+			position: absolute;
+			top: 20px;
+			right: 18px;
+			width: 30px;
+			height: 30px;
+		}
+	}
 	
   
 	@include tablet {
@@ -26,14 +39,19 @@
 	  }
   
 	  &--close {
-		width: 26px;
-		height: 1px;
+		width: 40px;
+		height: 2px;
 		position: absolute;
-		background-color: #0b2647;
-		left: 20%;
+		background-color: var(--primary2);
+		left: 12%;
 		transform: translateX(-50%) translateY(-50%);
+
+		@include mobile {
+			width: 30px;
+		}
   
 		&:first-child {
+			
 		  transform: rotate(45deg);
 		}
   
@@ -45,19 +63,3 @@
 	}
   }
   
-  .burger-close {
-	width: 46px;
-	height: 46px;
-	background: var(--white);
-	border: 1px solid #eaeaea;
-	border-radius: 100px;
-	position: relative;
-  }
-  
-  .burger__white {
-	background: transparent;
-  
-	.burger__line {
-	  background-color: var(--white);
-	}
-  }

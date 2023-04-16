@@ -56,7 +56,9 @@
   "dependencies": {
     "graph-modal": "^1.0.4",
     "graph-tabs": "^1.0.0",
+    "gsap": "^3.11.5",
     "inputmask": "^5.0.7",
+    "jquery": "^3.6.4",
     "just-validate": "^3.3.3",
     "lozad": "^1.16.0",
     "smooth-scroll": "^16.1.3",

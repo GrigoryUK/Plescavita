@@ -11,6 +11,24 @@
 		padding-bottom: 30px;
 	}
 
+	&__block {
+		// transition: all 0.2s ease;
+
+		&.block-hidden {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+		}
+
+		&.block-none {
+			display: none;
+		}
+
+		&.block-active {
+			display: block;
+		}
+	}
+
 	&__title {
 		margin-bottom: 70px;
 		display: flex;

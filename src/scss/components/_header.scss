@@ -11,9 +11,11 @@
 	}
 
 	&.header--pre--fixed {
+		
 		position: fixed;
 		background: var(--primary1);
-
+		transform: translateY(-100%);
+		transition: all 0.3s ease;
 		a {
 			color: var(--primary2);
 		}
@@ -42,6 +44,10 @@
 		.burger__line {
 			background: var(--primary2);
 		}
+	}
+
+	&.header--fixed {
+		transform: translateY(0%);
 	}
 
 	&__content {
