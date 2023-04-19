@@ -10,6 +10,52 @@
 
 	}
 
+	&.header--other {
+		position: relative;
+		background: var(--primary1);
+		transition: all 0.3s ease;
+
+
+
+		@include tablet {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			border-bottom: 1px solid var(--primary5);
+		}
+
+		a {
+			color: var(--primary2);
+		}
+
+
+
+		.header__left .icons .btn-icon .icon {
+
+			fill: var(--primary2);
+
+
+		}
+
+		.header__left .icons .btn-icon {
+
+			@include hover {
+				.icon {
+					fill: var(--primary3);
+				}
+
+			}
+
+			
+		}
+
+		.burger__line {
+			background: var(--primary2);
+		}
+
+	}
+
 	&.header--pre--fixed {
 		
 		position: fixed;

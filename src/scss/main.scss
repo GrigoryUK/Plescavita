@@ -5,11 +5,17 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/global";
 @import "./components/header";
 @import "./components/footer";
 @import "./components/burger";
 @import "./components/menu";
+@import "./components/dropdownLink";
+@import "./components/accordion";
 @import "./components/test";
 @import "./components/home/sectionQuote";
 @import "./components/home/sectionTabs";
 @import "./components/home/sectionMain";
+@import "./components/history/historyNo";
+@import "./components/history/history";
+@import "./components/profile/profile";

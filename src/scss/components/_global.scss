@@ -1,0 +1,63 @@
+.titleComponent {
+	h1 {
+		margin: 0;
+		font-family: 'Aeroport';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 160%;
+
+		@include mobile {
+			font-size: 28px;
+			line-height: 140%;
+		}
+	}
+}
+
+.buttonComponent {
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	background: var(--primary6);
+	color: var(--primary2);
+	font-size: 18px;
+	line-height: 100%;
+	padding: 14px 32px 18px 32px;
+	border-radius: 100px;
+
+	&.inline {
+		display: inline-block;
+	}
+ 
+
+	&.active {
+		background: var(--primary3);
+		color: var(--primary1);
+	}
+
+	&.max {
+		display: flex;
+		width: 100%;
+	}
+
+	@include hover {
+		background: var(--primary3);
+		color: var(--primary1);
+	}
+
+}
+
+.cardComponent {
+	border: 1px solid #EDEDED;
+}
+
+.padding-top {
+
+	@include tablet {
+		padding-top: 95px;
+	}
+
+	@include mobile {
+		padding-top: 75px;
+	}
+}

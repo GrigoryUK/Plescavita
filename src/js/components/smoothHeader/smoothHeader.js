@@ -3,11 +3,10 @@ import { addClass, removeClass } from "../shared/helpers";
 
 
 function smoothHeader() {
-	const trigger = document.getElementById('triggerHeader').offsetTop;
 	const header = document.querySelector('.header--pre--fixed'); 
-	
 
 	if (header) {
+		const trigger = document.getElementById('triggerHeader').offsetTop;
 		document.addEventListener('scroll', (el) => {
 			let scrollDistance = window.scrollY;
 	 

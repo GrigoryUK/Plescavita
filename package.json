@@ -54,6 +54,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "accordion-js": "^3.3.4",
+    "disable-scroll": "^0.6.0",
     "graph-modal": "^1.0.4",
     "graph-tabs": "^1.0.0",
     "gsap": "^3.11.5",
