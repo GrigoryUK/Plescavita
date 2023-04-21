@@ -152,6 +152,7 @@
 			border-radius: 10px;
 			overflow: hidden;
 			background: var(--primary1);
+			cursor: pointer;
 
 			&__image {
 				margin-bottom: 15px;
@@ -272,6 +273,14 @@
 					@include mobile {
 						display: block;
 					}
+				}
+			}
+
+			@include hover {
+
+				.item__button {
+					color: var(--primary1);
+					background: var(--primary3);
 				}
 			}
 		}

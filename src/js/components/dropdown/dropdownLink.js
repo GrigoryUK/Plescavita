@@ -63,7 +63,7 @@ export default function dropdownLink() {
 			options.forEach(option => {
 				option.addEventListener('click', () => {
 					selected.value = option.innerText;
-		
+					
 					select.classList.remove('select-clicked');
 					caret.classList.remove('caret-rorate');
 					menu.classList.remove('menu-open');

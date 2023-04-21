@@ -24,25 +24,32 @@ function maskPhone() {
 
 
 function validateLogin() {
-	const form = document.querySelector('.form-login')
-	const containerOne = form.querySelector('.part-1');
-	const containerTwo = form.querySelector('.part-2');
-	const buttonOne = containerOne.querySelector('button');
-	const buttonTwo = containerTwo.querySelector('button');
+	const form = document.querySelector('.form-login'); 
 
-	buttonsChecks(buttonOne, containerOne, buttonTwo, containerTwo);
+	if (form) {
+		const containerOne = form.querySelector('.part-1');
+		const containerTwo = form.querySelector('.part-2');
+		const buttonOne = containerOne.querySelector('button');
+		const buttonTwo = containerTwo.querySelector('button');
+	
+		buttonsChecks(buttonOne, containerOne, buttonTwo, containerTwo);
+	}
+	
 }
 
 
 
 function validateRegister() {
 	const form = document.querySelector('.form-register');
-	const containerOne = form.querySelector('.part-1');
-	const containerTwo = form.querySelector('.part-2');
-	const buttonOne = containerOne.querySelector('button');
-	const buttonTwo = containerTwo.querySelector('button');
 
-	buttonsChecks(buttonOne, containerOne, buttonTwo, containerTwo);
+	if (form) {
+		const containerOne = form.querySelector('.part-1');
+		const containerTwo = form.querySelector('.part-2');
+		const buttonOne = containerOne.querySelector('button');
+		const buttonTwo = containerTwo.querySelector('button');
+		buttonsChecks(buttonOne, containerOne, buttonTwo, containerTwo);
+	}
+	
 
 }
 

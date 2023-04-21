@@ -1,37 +1,49 @@
+import { addClass, removeClass } from "../shared/helpers";
 
 
 function checkboxAddress() {
-	const container = document.querySelector('.adresses'); 
+
+}
+
+function checkboxCart() {
+	const container = document.querySelector('.cart__payment'); 
 
 	if (container) {
-		const inputs = container.querySelectorAll('input[type="checkbox"]'); 
-		// inputs.forEach((input) => {
-		// 	input.addEventListener('click', (el) => {
-		// 		inputs.forEach(input => {
-		// 			input.removeAttribute('checked', 'checked')
-		// 		})
-		// 		input.setAttribute('checked', 'checked')
-		// 	})
-			
-		// })
-		
-		// function toggleCaret(open, icon) {
-		// 	for (let i = 0; i < open.length; i++) {
-		// 		open[i].addEventListener("click", function () {
-		// 			open[i].setAttribute('checked', 'checked')
-		// 			for (var j = 0; j < open.length; j++) {
-		// 				if (i != j) {
-		// 					open[j].removeAttribute('checked', 'checked')
-		// 				}
-		// 			}
-		// 		});
-		// 	}
-		// }
+		const checkboxes = container.querySelectorAll('.checkbox'); 
+		const containerItems = container.querySelector('.cart__payment--row'); 
+		const items = containerItems.querySelectorAll('.item')
 
-		// toggleCaret(inputs)
+		items.forEach(item => {
+			item.addEventListener('click', el => {
+				const radioBtn = item.querySelector('input[type="radio"]'); 
+				radioBtn.click();
+				items.forEach(item => {
+					removeClass(item, 'item--active'); 
+				})
+				addClass(item, 'item--active'); 
+
+			})
+		})
+		// checkboxes.forEach(checkbox => {
+		// 	checkbox.addEventListener('click', el => {
+				
+		// 		const input = checkbox.querySelector('input');
+
+		// 		if (input.checked) {
+		// 			items.forEach(item => {
+		// 				removeClass(item, 'item--active'); 
+		// 			})
+		// 			const item = checkbox.closest('.item'); 
+		// 			addClass(item, 'item--active'); 
+
+		// 		}
+		// 	})
+		// })
+ 
 	}
 }
 
 export {
+	checkboxCart,
 	checkboxAddress
 }

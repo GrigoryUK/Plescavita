@@ -4,7 +4,7 @@ import {example} from "./shared/import";
 import {tabsCatalog, tabsProfile} from "./tabs/tabs";
 import dropdownLink from "./dropdown/dropdownLink";
 import { accordion } from "./accordion/accordion";
-import { checkboxAddress } from "./checkbox/checkbox";
+import { checkboxAddress, checkboxCart } from "./checkbox/checkbox";
 import { modalProfile } from "./modal/modal";
 import { maskPhone, validateLogin, validateRegister } from "./validation/validation";
 
@@ -22,5 +22,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   maskPhone()
   validateRegister()
   validateLogin()
+  checkboxCart();
 });
 
