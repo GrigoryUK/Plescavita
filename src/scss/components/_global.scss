@@ -1,4 +1,16 @@
 .titleComponent {
+	margin: 0;
+	font-family: 'Aeroport';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 36px;
+	line-height: 160%;
+
+	@include mobile {
+		font-size: 28px;
+		line-height: 140%;
+	}
+
 	h1 {
 		margin: 0;
 		font-family: 'Aeroport';
@@ -28,7 +40,7 @@
 	&.inline {
 		display: inline-block;
 	}
- 
+
 
 	&.active {
 		background: var(--primary3);
@@ -36,8 +48,19 @@
 	}
 
 	&.max {
-		display: flex;
+
 		width: 100%;
+	}
+
+	&:disabled {
+		background: #888888;
+		color: var(--primary1);
+		cursor: default;
+
+		@include hover {
+			background: #888888;
+			color: var(--primary1);
+		}
 	}
 
 	@include hover {
@@ -59,5 +82,388 @@
 
 	@include mobile {
 		padding-top: 75px;
+	}
+}
+
+.checkboxComponent {
+	.checkbox {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+
+
+		&__input {
+			appearance: none;
+			-webkit-appearance: none;
+			position: absolute;
+
+		}
+
+		&__label {
+			font-family: "IBM Plex Sans";
+
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			letter-spacing: 0.0168em;
+			color: var(--black);
+			cursor: pointer;
+			padding-left: 44px;
+
+			&::before {
+				content: "";
+				display: block;
+				width: 30px;
+				height: 30px;
+				background: var(--primary5);
+				border-radius: 100px;
+				border: 6px solid var(--primary5);
+				cursor: pointer;
+				position: absolute;
+				top: -4px;
+				left: 0;
+				z-index: 1;
+			}
+
+			&::after {
+				content: "";
+				width: 30px;
+				height: 30px;
+				border-radius: 100px;
+				background: var(--primary1);
+				// background: red;
+				border: 6px solid var(--primary3);
+				position: absolute;
+				top: -4px;
+				left: 0;
+				z-index: 2;
+				opacity: 0;
+			}
+
+
+
+
+
+
+		}
+
+	}
+
+	.checkbox__input:checked+.checkbox__label::after {
+		opacity: 1;
+	}
+
+
+
+
+
+
+}
+
+.checkboxDoneComponent {
+	@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+
+		.checkbox {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+
+			@include mobile {
+				align-items: flex-start;
+			}
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			--active: var(--primary3);
+			--active-inner: #fff;
+			--background: var(--primary5);
+			-webkit-appearance: none;
+			-moz-appearance: none;
+
+			position: relative;
+
+			margin: 0;
+			outline: none;
+			height: 30px;
+			background: var(--b, var(--background));
+			border-radius: 100px;
+			transition: all 0.1s ease;
+			cursor: pointer;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+			}
+
+			&:checked {
+				--b: var(--active);
+				--bc: var(--active);
+
+			}
+
+			&:not(.switch) {
+				min-width: 30px;
+				border-radius: 100px;
+
+
+
+				&::after {
+					opacity: var(--o, 0);
+				}
+
+				&:checked {
+					--o: 1;
+				}
+			}
+
+
+
+
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			&:not(.switch) {
+
+				&::after {
+					left: 38%;
+					top: 50%;
+					border: 2px solid var(--active-inner);
+					border-top: 0;
+					border-left: 0;
+					width: 7px;
+					height: 10px;
+					transform: rotate(var(--r, 20deg)) translate(-50%, -50%);
+				}
+
+				&:checked {
+					--r: 43deg;
+				}
+			}
+		}
+
+		label {
+			width: 100%;
+			// height: 30px;
+		}
+	}
+}
+
+.inputComponent {
+	position: relative;
+
+	input,
+	textarea {
+		outline: none;
+		border: none;
+		font-family: 'Aeroport';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 130%;
+		resize: none;
+		height: 25px;
+		overflow-y: hidden;
+		color: var(--primary7);
+		width: 100%;
+
+		@include mobile {
+			max-width: 222px;
+			height: auto;
+		}
+
+	}
+
+	button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@include mobile {
+			top: 0;
+			transform: none;
+		}
+	}
+
+	svg {
+		fill: #848484;
+
+		@include hover {
+			fill: var(--primary3);
+		}
+	}
+
+	.btn-edit {
+		right: 34px;
+		width: 17px;
+		height: 18px;
+	}
+
+	.btn-delete {
+		right: 0;
+		width: 15px;
+		height: 16px;
+	}
+
+	&--form {
+
+		input {
+			padding: 13px 20px;
+			background: var(--primary6);
+			border-radius: 6px;
+			height: auto;
+			font-family: 'HelveticaNeueCyr';
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 160%;
+			color: var(--primary7);
+
+			@include mobile {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+
+		.btn-edit {
+			right: 16px;
+			width: 17px;
+			height: 18px;
+
+			@include mobile {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+	}
+
+	&.input-authorization {
+
+		input {
+			font-family: 'HelveticaNeueCyr';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 160%;
+			color: var(--primary7);
+			border-radius: 6px;
+			background: var(--primary6);
+			height: auto;
+			padding: 13px 20px;
+
+			&::placeholder {
+				opacity: 0.5;
+			}
+
+			@include mobile {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+.counterComponent {
+	display: flex;
+	align-items: center;
+	background: var(--primary6);
+	border-radius: 4px;
+	height: 50px;
+
+	.btn-counter {
+		position: relative;
+		width: 32px;
+		height: 32px;
+		display: block;
+
+		margin: 8px 12px;
+
+		
+
+		
+
+		&.minus {
+
+			i {
+				width: 10px;
+				height: 10px;
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 8px;
+					height: 1.5px;
+					background: var(--primary2);
+					transition: all 0.2s ease;
+				}
+			}
+
+			
+		}
+
+		&.plus {
+
+			i {
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 8px;
+					height: 1.5px;
+					background: var(--primary2);
+					transition: all 0.2s ease;
+				}
+
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(-90deg);
+					width: 8px;
+					height: 1px;
+					background: var(--primary2);
+					transition: all 0.2s ease;
+				}
+			}
+		}
+
+		@include hover {
+			
+			i {
+				&::before {
+					background: var(--primary3);
+				}
+
+				&::after {
+					background: var(--primary3);
+				}
+			}
+			
+		}
+
+	}
+
+	.number {
+		font-family: 'HelveticaNeueCyr';
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		text-align: center;
+		text-transform: uppercase;
+		color: var(--primary7);
+
+		
 	}
 }

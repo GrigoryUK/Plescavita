@@ -1,6 +1,7 @@
 import { addClass, removeClass } from "../shared/helpers";
+import GraphTabs from 'graph-tabs';
 
-export default function Tabs() {
+function tabsCatalog() {
 	const containerTabs = document.querySelector('.sectionTabs__buttons');
 
 	if (containerTabs) {
@@ -59,4 +60,16 @@ export default function Tabs() {
 		
 	}
 
+}
+
+function tabsProfile() {
+	const check = document.querySelector('.tabs-profile'); 
+	if (check) {
+		const tabs = new GraphTabs('tabs-profile');
+	}
+}
+
+export {
+	tabsCatalog, 
+	tabsProfile
 }
