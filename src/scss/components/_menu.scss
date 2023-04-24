@@ -6,13 +6,14 @@
 	background: var(--primary1);
 	width: 100%;
 	height: 100%;
-	z-index: var(--z-menu);
+	
 	padding-top: 22px;
 	transition: all 0.3s ease-in-out;
 	opacity: 0;
 	visibility: hidden;
 
 	&.menu--active {
+		z-index: var(--z-menu);
 		opacity: 1;
 		visibility: visible;
 	}

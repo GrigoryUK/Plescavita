@@ -1,6 +1,10 @@
 <svg version="1.1"  xmlns="http://www.w3.org/2000/svg">
   <symbol id="test" width="79" height="53" viewBox="0 0 79 53">
   </symbol>
+  <symbol id="icon-arrow"  width="10" height="17" viewBox="0 0 10 17">
+    <rect x="9.89941" y="8.48535" width="12" height="2" rx="1" transform="rotate(135 9.89941 8.48535)"/>
+    <rect x="8.48535" y="9.89954" width="12" height="2" rx="1" transform="rotate(-135 8.48535 9.89954)"/>
+  </symbol>
   <symbol id="icon-done"  width="100" height="100" viewBox="0 0 100 100">
   <circle opacity="0.3" cx="50" cy="50" r="49" stroke="#CACACA" stroke-width="2"/>
   <path d="M45.4537 61C44.8134 61 44.2051 60.7433 43.7569 60.294L34.6963 51.2128C33.7679 50.2822 33.7679 48.7419 34.6963 47.8113C35.6248 46.8807 37.1616 46.8807 38.09 47.8113L45.4537 55.1918L61.91 38.6979C62.8384 37.7674 64.3752 37.7674 65.3037 38.6979C66.2321 39.6285 66.2321 41.1688 65.3037 42.0994L47.1506 60.294C46.7024 60.7433 46.094 61 45.4537 61Z" fill="#F99D15"/>

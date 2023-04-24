@@ -6,9 +6,9 @@
 				<div class="container">
 					<ul>
 						<li>
-							<div class="item">
+							<div class="item counter-container">
 								<div class="item__delete">
-									<button class="btn-reset btn-close">
+									<button class="btn-reset btn-close" data-graph-path="delete-product">
 
 									</button>
 								</div>
@@ -24,18 +24,18 @@
 								<div class="item__right">
 									<div class="item__counter">
 										<div class="counterComponent">
-											<button class="btn-reset btn-counter minus">
+											<button class="btn-reset btn-counter minus btn-counter-minus">
 												<i></i>
 											</button>
-											<div class="number">
+											<div class="number counter-num">
 												1
 											</div>
-											<button class="btn-reset btn-counter plus">
+											<button class="btn-reset btn-counter plus btn-counter-plus">
 												<i></i>
 											</button>
 										</div>
-									</div>
-									<div class="priceComponent">
+									</div> 
+									<div class="priceComponent counter-price">
 										<span>1022</span><span>р</span>
 									</div>
 								</div>
@@ -44,9 +44,9 @@
 						</li>
 
 						<li>
-							<div class="item">
+							<div class="item counter-container">
 								<div class="item__delete">
-									<button class="btn-reset btn-close">
+									<button class="btn-reset btn-close" data-graph-path="delete-product">
 
 									</button>
 								</div>
@@ -56,24 +56,24 @@
 										<img data-src="./img/image-83-2.jpg" class="image lozad loading" alt="">
 									</div>
 									<div class="item__title">
-										Плескавица с курицей
+										Плескавица со свининой
 									</div>
 								</div>
 								<div class="item__right">
 									<div class="item__counter">
 										<div class="counterComponent">
-											<button class="btn-reset btn-counter minus">
+											<button class="btn-reset btn-counter minus btn-counter-minus">
 												<i></i>
 											</button>
-											<div class="number">
+											<div class="number counter-num">
 												1
 											</div>
-											<button class="btn-reset btn-counter plus">
+											<button class="btn-reset btn-counter plus btn-counter-plus">
 												<i></i>
 											</button>
 										</div>
-									</div>
-									<div class="priceComponent">
+									</div> 
+									<div class="priceComponent counter-price">
 										<span>1022</span><span>р</span>
 									</div>
 								</div>
@@ -110,29 +110,24 @@
 									<div class="deliveryComponent">
 										<div class="adresses">
 											<ul>
-
+					
 												<li>
 													<div class="checkboxDoneComponent">
 														<div class="checkbox">
-															<input id="val1" class="checkbox__input" type="radio"
-																name="address" checked>
-															<label class="checkbox__label" for="val1">
+															<input id="dal1" class="checkbox__input" type="radio" name="idm1" checked>
+															<label class="checkbox__label" for="dal1">
 																<div class="inputComponent">
-																	<textarea type="text"
-																		value="Радищева 3, подъезд 3, кв 32, этаж 5"
+																	<span class="inputComponent__text" type="text" value="Радищева 3, подъезд 3, кв 32, этаж 5"
 																		readonly>Радищева 3, подъезд 3, кв 32, этаж 5
-																	</textarea>
+																	</span>
 																	<button class="btn-reset btn-icon btn-edit">
 																		<svg viewBox="0 0 17 18">
-																			<use xlink:href="img/sprite.svg#icon-edit">
-																			</use>
+																			<use xlink:href="img/sprite.svg#icon-edit"></use>
 																		</svg>
 																	</button>
-																	<button class="btn-reset btn-icon btn-delete">
+																	<button class="btn-reset btn-icon btn-delete"  data-graph-path="delete-address" >
 																		<svg viewBox="0 0 15 16">
-																			<use
-																				xlink:href="img/sprite.svg#icon-delete">
-																			</use>
+																			<use xlink:href="img/sprite.svg#icon-delete"></use>
 																		</svg>
 																	</button>
 																</div>
@@ -143,25 +138,20 @@
 												<li>
 													<div class="checkboxDoneComponent">
 														<div class="checkbox">
-															<input id="val2" class="checkbox__input" type="radio"
-																name="address">
-															<label class="checkbox__label" for="val2">
+															<input id="dal2" class="checkbox__input" type="radio" name="idm1">
+															<label class="checkbox__label" for="dal2">
 																<div class="inputComponent">
-																	<textarea type="text"
-																		value="Радищева 3, подъезд 3, кв 32, этаж 5"
+																	<span class="inputComponent__text" type="text" value="Радищева 3, подъезд 3, кв 32, этаж 5"
 																		readonly>Радищева 3, подъезд 3, кв 32, этаж 5
-																	</textarea>
+																	</span>
 																	<button class="btn-reset btn-icon btn-edit">
 																		<svg viewBox="0 0 17 18">
-																			<use xlink:href="img/sprite.svg#icon-edit">
-																			</use>
+																			<use xlink:href="img/sprite.svg#icon-edit"></use>
 																		</svg>
 																	</button>
-																	<button class="btn-reset btn-icon btn-delete">
+																	<button class="btn-reset btn-icon btn-delete"  data-graph-path="delete-address">
 																		<svg viewBox="0 0 15 16">
-																			<use
-																				xlink:href="img/sprite.svg#icon-delete">
-																			</use>
+																			<use xlink:href="img/sprite.svg#icon-delete"></use>
 																		</svg>
 																	</button>
 																</div>
@@ -172,25 +162,20 @@
 												<li>
 													<div class="checkboxDoneComponent">
 														<div class="checkbox">
-															<input id="val3" class="checkbox__input" type="radio"
-																name="address">
-															<label class="checkbox__label" for="val3">
+															<input id="dal3" class="checkbox__input" type="radio" name="idm1">
+															<label class="checkbox__label" for="dal3">
 																<div class="inputComponent">
-																	<textarea type="text"
-																		value="Радищева 3, подъезд 3, кв 32, этаж 5"
+																	<span class="inputComponent__text" type="text" value="Радищева 3, подъезд 3, кв 32, этаж 5"
 																		readonly>Радищева 3, подъезд 3, кв 32, этаж 5
-																	</textarea>
+																	</span>
 																	<button class="btn-reset btn-icon btn-edit">
 																		<svg viewBox="0 0 17 18">
-																			<use xlink:href="img/sprite.svg#icon-edit">
-																			</use>
+																			<use xlink:href="img/sprite.svg#icon-edit"></use>
 																		</svg>
 																	</button>
-																	<button class="btn-reset btn-icon btn-delete">
+																	<button class="btn-reset btn-icon btn-delete"  data-graph-path="delete-address">
 																		<svg viewBox="0 0 15 16">
-																			<use
-																				xlink:href="img/sprite.svg#icon-delete">
-																			</use>
+																			<use xlink:href="img/sprite.svg#icon-delete"></use>
 																		</svg>
 																	</button>
 																</div>
@@ -198,10 +183,38 @@
 														</div>
 													</div>
 												</li>
-
-
+												<li class="li-add-address border-none display-none">
+													<div class="addAddressComponent">
+														<div class="inputComponent small">
+															<input type="text" placeholder="Екатеринбург">
+														</div>
+														<div class="inputComponent small">
+															<input type="text" placeholder="Укажите улицу">
+														</div>
+														<div class="inputComponent small">
+															<input type="text" placeholder="Подъезд">
+														</div>
+														<div class="inputComponent small">
+															<input type="text" placeholder="Код двери">
+														</div>
+														<div class="inputComponent small">
+															<input type="text" placeholder="Этаж">
+														</div>
+														<div class="inputComponent small">
+															<input type="text" placeholder="Квартира">
+														</div>
+														<div class="inputComponent small">
+															<textarea type="text" placeholder="Комментарий к адресу"></textarea>
+														</div>
+														
+													</div>
+													<button class="buttonComponent active btn-adresses">
+														Добавить
+													</button>
+												</li>
+					
 											</ul>
-											<button class="btn-reset button">
+											<button class="btn-reset button button-add-address">
 												<span>Добавить другой адрес</span>
 												<svg viewBox="0 0 12 12">
 													<use xlink:href="img/sprite.svg#icon-plus"></use>

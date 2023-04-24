@@ -155,9 +155,12 @@
 			&__right {
 				display: flex;
 				align-items: center;
-				gap: 62px;
+				max-width: 242px;
+				width: 100%;
+				justify-content: space-between;
 
 				@include mobile {
+					max-width: 100%;
 					width: 100%;
 					flex-direction: row-reverse;
 					justify-content: space-between;
@@ -184,9 +187,13 @@
 		&--box {
 			display: flex;
 			align-items: center;
-			gap: 64px;
+			// gap: 64px;
+			justify-content: space-between;
+			max-width: 226px;
+			width: 100%;
 
 			@include mobile {
+				max-width: 100%;
 				gap: 30px;
 			}
 		}

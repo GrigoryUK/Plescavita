@@ -1,6 +1,10 @@
 .sectionMain {
 	position: relative;
 
+	&__container {
+		position: relative;
+	}
+
 	&__image {
 		width: 100vw;
 		height: 100vh;
@@ -25,20 +29,30 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 
-		@include tablet {
-			padding: 0 80px;
+		@include big-desktop {
+			max-width: 1030px;
 		}
 
-		@include mobile {
-			padding: 0 15px;
+		.container {
+			@include tablet {
+				padding: 0 80px;
+			}
+
+			@include mobile {
+				padding: 0 15px;
+			}
 		}
+
+		
+
+		
 
 
 		.title {
 			margin-bottom: 20px;
 			max-width: 700px;
 
-			h1 {
+			h4 {
 				margin: 0;
 				color: var(--primary1);
 				font-size: 46px;
@@ -88,7 +102,7 @@
 				color: var(--primary1);
 
 				@include small-tablet {
-					padding: 14px 29px 18px;	
+					padding: 14px 29px 18px;
 				}
 
 				@include hover {
@@ -100,3 +114,124 @@
 		}
 	}
 }
+
+.sliderMain {
+	z-index: var(--z-block-main);
+	&-container {
+		position: absolute;
+		max-width: 1630px;
+		left: 50%;
+		top: 50%;
+		width: 100%;
+		
+		transform: translate(-50%, -50%);
+		z-index: var(--z-slider-buttons);
+
+		@include mobile {
+			height: 60px;
+			transform: none;
+			top: auto;
+			left: 0;
+			bottom: 0;
+			
+		}
+
+		
+	}
+
+	&-block {
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+	}
+
+	&-button {
+
+		&-next {
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			top: 50%;
+			right: -50px;
+			transform: translateY(-50%);
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include big-desktop {
+				right: 84px;
+			}
+
+			@include tablet {
+				right: 30px;
+			}
+
+			@include mobile {
+				right: auto;
+				left: 60px;
+				bottom: 40px;
+			}
+			
+
+			svg {
+				max-width: 10px;
+				max-height: 16px;
+				width: 100%;
+				fill: var(--primary1);
+				
+			}
+
+			@include hover {
+				svg {
+					opacity: 0.5;
+				}
+			}
+		}
+
+		&-prev {
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			top: 50%;
+			left: -50px;
+			transform: translateY(-50%);
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include big-desktop {
+				left: 84px;
+			}
+
+			@include tablet {
+				left: 30px;
+			}
+
+			@include mobile {
+				left: 20px;
+				bottom: 40px;
+			}
+
+			
+			
+			
+
+			svg {
+				max-width: 10px;
+				max-height: 16px;
+				width: 100%;
+				fill: var(--primary1);
+				transform: rotate(180deg);
+			}
+
+			@include hover {
+				svg {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+} 

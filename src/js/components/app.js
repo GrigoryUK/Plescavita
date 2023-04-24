@@ -7,6 +7,10 @@ import { accordion } from "./accordion/accordion";
 import { checkboxAddress, checkboxCart } from "./checkbox/checkbox";
 import { modalProfile } from "./modal/modal";
 import { maskPhone, validateLogin, validateRegister } from "./validation/validation";
+import sliderApp from "./slider/slider";
+import profileData from "./profileData/profileData";
+import addAddress from "./addAddress/addAddress";
+import counterPrice from "./counterPrice/counterPrice";
 
 document.addEventListener('DOMContentLoaded', (event) => {
   console.log('DOM fully loaded and parsed');
@@ -22,6 +26,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   maskPhone()
   validateRegister()
   validateLogin()
-  checkboxCart();
+  checkboxCart()
+  sliderApp()
+  profileData()
+  addAddress()
+  counterPrice()
 });
 

@@ -188,22 +188,23 @@
 			}
 
 			span {
-				display: block;
+				
 				font-family: 'HelveticaNeueCyr';
 				font-weight: 400;
 				font-size: 15px;
 				line-height: 160%;
 				color: var(--primary7);
 
-				&:last-child {
-					margin-right: 55px;
-				}
+				
+
+				
+			}
+
+			.item-price {
+				margin-right: 55px;
 
 				@include mobile {
-
-					&:last-child {
-						margin-right: 30px;
-					}
+					margin-right: 30px;
 				}
 			}
 		}

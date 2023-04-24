@@ -63,7 +63,7 @@
 .graph-modal__container {
 
 	&.modal-profile {
-		width: 500px;
+		max-width: 500px;
 		padding: 36px 39px 40px;
 
 		@include mobile {
@@ -169,6 +169,53 @@
 		.graph-modal__content {}
 
 
+	}
+
+	&.modal-close {
+		max-width: 500px;
+		padding: 36px 39px 40px;
+
+		@include mobile {
+			padding: 0 15px;
+			padding-top: 70px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			min-height: 100vh;
+			margin: auto;
+			border-radius: 0;
+
+		}
+	}
+}
+
+.modal-close {
+
+	
+
+	
+	.titleComponent {
+		text-align: center;
+		margin-bottom: 1rem;
+		line-height: 1.4;
+		font-size: 30px;
+
+		@include mobile {
+			font-size: 24px;
+		}
+	}
+	.rowComponent {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.buttonComponent {
+		width: 50%;
+		@include mobile {
+			padding: 14px 0px 18px;
+		}
 	}
 }
 

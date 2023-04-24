@@ -6,9 +6,9 @@
 				<div class="container">
 					<ul>
 						<li>
-							<div class="item">
+							<div class="item counter-container">
 								<div class="item__delete">
-									<button class="btn-reset btn-close">
+									<button class="btn-reset btn-close" data-graph-path="delete-product">
 
 									</button>
 								</div>
@@ -24,18 +24,18 @@
 								<div class="item__right">
 									<div class="item__counter">
 										<div class="counterComponent">
-											<button class="btn-reset btn-counter minus">
+											<button class="btn-reset btn-counter minus btn-counter-minus">
 												<i></i>
 											</button>
-											<div class="number">
+											<div class="number counter-num">
 												1
 											</div>
-											<button class="btn-reset btn-counter plus">
+											<button class="btn-reset btn-counter plus btn-counter-plus">
 												<i></i>
 											</button>
 										</div>
-									</div>
-									<div class="priceComponent">
+									</div> 
+									<div class="priceComponent counter-price">
 										<span>1022</span><span>р</span>
 									</div>
 								</div>
@@ -44,9 +44,9 @@
 						</li>
 
 						<li>
-							<div class="item">
+							<div class="item counter-container">
 								<div class="item__delete">
-									<button class="btn-reset btn-close">
+									<button class="btn-reset btn-close" data-graph-path="delete-product">
 
 									</button>
 								</div>
@@ -56,24 +56,24 @@
 										<img data-src="./img/image-83-2.jpg" class="image lozad loading" alt="">
 									</div>
 									<div class="item__title">
-										Плескавица с курицей
+										Плескавица со свининой
 									</div>
 								</div>
 								<div class="item__right">
 									<div class="item__counter">
 										<div class="counterComponent">
-											<button class="btn-reset btn-counter minus">
+											<button class="btn-reset btn-counter minus btn-counter-minus">
 												<i></i>
 											</button>
-											<div class="number">
+											<div class="number counter-num">
 												1
 											</div>
-											<button class="btn-reset btn-counter plus">
+											<button class="btn-reset btn-counter plus btn-counter-plus">
 												<i></i>
 											</button>
 										</div>
-									</div>
-									<div class="priceComponent">
+									</div> 
+									<div class="priceComponent counter-price">
 										<span>1022</span><span>р</span>
 									</div>
 								</div>
@@ -136,10 +136,14 @@
 														<div class="inputComponent small">
 															<textarea type="text" placeholder="Комментарий к адресу"></textarea>
 														</div>
+														
 													</div>
-													
+													<button class="buttonComponent active btn-adresses">
+														Добавить
+													</button>
 												</li>
 											</ul>
+											
 										</div>
 									</div>
 								</div>
